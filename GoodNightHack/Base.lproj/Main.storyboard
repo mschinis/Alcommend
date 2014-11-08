@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7Rp-K1-OCf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Menu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="GoodNightHack" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,301 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxJ-F8-Sqc">
+                                <rect key="frame" x="276" y="222" width="49" height="30"/>
+                                <state key="normal" title="History">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="HistoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bkS-yx-YkQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohL-AV-bXZ">
+                                <rect key="frame" x="208" y="270" width="184" height="30"/>
+                                <state key="normal" title="Add drinks for specific day">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="AddDrinksButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L1r-dp-q8U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhz-eU-95h">
+                                <rect key="frame" x="236" y="176" width="129" height="30"/>
+                                <state key="normal" title="Recommendations"/>
+                                <connections>
+                                    <action selector="RecommendationsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fxW-xO-H1S"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Menu" id="VyA-9c-BWc"/>
+                    <connections>
+                        <segue destination="KCG-Sn-Z2l" kind="show" identifier="showPreviousViewSegue" id="048-pT-ypq"/>
+                        <segue destination="dam-UM-tko" kind="show" identifier="showDrinksSegue" id="Lp5-Jc-H0M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="835" y="-104"/>
+        </scene>
+        <!--Recommendations-->
+        <scene sceneID="9TG-Nd-nAM">
+            <objects>
+                <viewController id="vZt-No-7rm" customClass="RecommendationsViewController" customModule="GoodNightHack" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cYx-zU-cnd"/>
+                        <viewControllerLayoutGuide type="bottom" id="UvX-J7-T0t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AEJ-sf-mtG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Recommendations" id="a28-ut-gIu">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="8rs-9v-Kee">
+                            <connections>
+                                <action selector="showMenuBarButtonPressed:" destination="vZt-No-7rm" id="Uq6-T7-Stb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showMenuSegue" id="yA2-hu-K0E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y86-l5-a9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1732" y="-1002"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="DBV-34-FHA">
+            <objects>
+                <viewController id="KCG-Sn-Z2l" customClass="PreviousViewController" customModule="GoodNightHack" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Jb-Su-pMh"/>
+                        <viewControllerLayoutGuide type="bottom" id="irz-Er-pZy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fXK-mV-LbK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="History" id="iof-7l-Wg0">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="3YO-1m-4Aj">
+                            <connections>
+                                <action selector="MenuBarButtonPressed:" destination="KCG-Sn-Z2l" id="eOP-UI-GzW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hUB-fi-ulo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1732" y="-104"/>
+        </scene>
+        <!--Drinks-->
+        <scene sceneID="jqb-WD-cfZ">
+            <objects>
+                <viewController id="dam-UM-tko" customClass="DrinksViewController" customModule="GoodNightHack" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8db-D9-WhX"/>
+                        <viewControllerLayoutGuide type="bottom" id="TYq-tp-WHj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Ud-x6-Wck">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dKR-9t-PoO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="drinkCell" textLabel="RjK-vx-ETF" detailTextLabel="PmU-ra-ZgA" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="WkW-i9-S5D">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WkW-i9-S5D" id="exg-HG-Gwr">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RjK-vx-ETF">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PmU-ra-ZgA">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dam-UM-tko" id="isC-Q7-qEZ"/>
+                                    <outlet property="delegate" destination="dam-UM-tko" id="pKM-Pc-rig"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgE-Cc-Bgj">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="R4W-Va-NSQ"/>
+                                    <barButtonItem title="Finish" id="tdI-VW-SHR"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="dKR-9t-PoO" secondAttribute="trailing" constant="-16" id="BSr-Vb-Eyn"/>
+                            <constraint firstItem="TYq-tp-WHj" firstAttribute="top" secondItem="dKR-9t-PoO" secondAttribute="bottom" id="TDc-GR-zrh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qgE-Cc-Bgj" secondAttribute="trailing" constant="-16" id="aYx-BO-bI1"/>
+                            <constraint firstItem="TYq-tp-WHj" firstAttribute="top" secondItem="qgE-Cc-Bgj" secondAttribute="bottom" id="m3g-J6-asz"/>
+                            <constraint firstItem="dKR-9t-PoO" firstAttribute="leading" secondItem="4Ud-x6-Wck" secondAttribute="leadingMargin" constant="-16" id="xo5-Q1-yQ6"/>
+                            <constraint firstItem="qgE-Cc-Bgj" firstAttribute="leading" secondItem="4Ud-x6-Wck" secondAttribute="leadingMargin" constant="-16" id="zhR-gb-hrD"/>
+                            <constraint firstItem="dKR-9t-PoO" firstAttribute="top" secondItem="4Ud-x6-Wck" secondAttribute="topMargin" id="zmN-YH-CKh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Drinks" id="1m5-ky-mPm">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="l6e-Ln-AMx">
+                            <connections>
+                                <action selector="MenuBarButtonPressed:" destination="dam-UM-tko" id="BR8-Uv-GBm"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="arq-nZ-iwd">
+                            <connections>
+                                <segue destination="8ga-jd-fdw" kind="presentation" identifier="addDrinkItemSegue" id="r1A-Ke-wno"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="dKR-9t-PoO" id="5mf-ss-yag"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ela-1z-bO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1732" y="613"/>
+        </scene>
+        <!--Add Drink View Controller-->
+        <scene sceneID="K2v-tx-kjP">
+            <objects>
+                <viewController id="8ga-jd-fdw" customClass="AddDrinkViewController" customModule="GoodNightHack" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zpC-xL-eSh"/>
+                        <viewControllerLayoutGuide type="bottom" id="7r9-EN-YAd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E2K-S4-Baq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search Drinks" translatesAutoresizingMaskIntoConstraints="NO" id="bwL-hg-mM8">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8ga-jd-fdw" id="RC8-c2-ibH"/>
+                                </connections>
+                            </searchBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aO2-xn-OJ9">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Select Drink" id="Iaa-7g-S27">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="A1D-Lj-sMs">
+                                            <connections>
+                                                <action selector="cancelBarButtonPressed:" destination="8ga-jd-fdw" id="hS9-dz-Bdb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Add" id="gGz-9Y-ywJ">
+                                            <connections>
+                                                <action selector="addBarButtonPressed:" destination="8ga-jd-fdw" id="8GF-Ww-geC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="W2r-1S-6by">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="drinkCell" rowHeight="60" id="o2e-CL-wdy" customClass="AddDrinkItemTableViewCell" customModule="GoodNightHack" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o2e-CL-wdy" id="ssq-AT-6IK">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yF-5p-gKe">
+                                                    <rect key="frame" x="24" y="15" width="174" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQk-xZ-1gZ">
+                                                    <rect key="frame" x="24" y="31" width="136" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailLabel" destination="KQk-xZ-1gZ" id="Kj5-MP-g3q"/>
+                                            <outlet property="titleLabel" destination="3yF-5p-gKe" id="SD8-73-6ZB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8ga-jd-fdw" id="4jR-nT-gQS"/>
+                                    <outlet property="delegate" destination="8ga-jd-fdw" id="TFY-jG-NB2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="W2r-1S-6by" firstAttribute="top" secondItem="bwL-hg-mM8" secondAttribute="bottom" id="2Hs-Lk-5LF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W2r-1S-6by" secondAttribute="trailing" constant="-16" id="3Gi-gr-hEC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aO2-xn-OJ9" secondAttribute="trailing" constant="-16" id="75A-ol-Fut"/>
+                            <constraint firstItem="aO2-xn-OJ9" firstAttribute="leading" secondItem="E2K-S4-Baq" secondAttribute="leadingMargin" constant="-16" id="E4z-47-rUh"/>
+                            <constraint firstItem="aO2-xn-OJ9" firstAttribute="top" secondItem="zpC-xL-eSh" secondAttribute="bottom" id="Lwk-3R-nje"/>
+                            <constraint firstItem="W2r-1S-6by" firstAttribute="leading" secondItem="E2K-S4-Baq" secondAttribute="leadingMargin" constant="-16" id="Qas-tD-CkF"/>
+                            <constraint firstItem="7r9-EN-YAd" firstAttribute="top" secondItem="W2r-1S-6by" secondAttribute="bottom" id="ZKw-y5-nh1"/>
+                            <constraint firstItem="bwL-hg-mM8" firstAttribute="leading" secondItem="E2K-S4-Baq" secondAttribute="leadingMargin" constant="-16" id="kPZ-w7-MCL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bwL-hg-mM8" secondAttribute="trailing" constant="-16" id="wfB-gs-g49"/>
+                            <constraint firstItem="bwL-hg-mM8" firstAttribute="top" secondItem="aO2-xn-OJ9" secondAttribute="bottom" id="yf4-7x-8LG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="bwL-hg-mM8" id="7EU-9E-wnO"/>
+                        <outlet property="searchDisplayController" destination="JU5-A0-x6m" id="mXG-NC-vm7"/>
+                        <outlet property="tableView" destination="W2r-1S-6by" id="etQ-4z-T5s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e9h-xQ-nJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="JU5-A0-x6m">
+                    <connections>
+                        <outlet property="delegate" destination="8ga-jd-fdw" id="s6i-z9-SRc"/>
+                        <outlet property="searchContentsController" destination="8ga-jd-fdw" id="MHn-LY-MCX"/>
+                        <outlet property="searchResultsDataSource" destination="8ga-jd-fdw" id="9CD-cg-uxZ"/>
+                        <outlet property="searchResultsDelegate" destination="8ga-jd-fdw" id="QGc-Fc-hfh"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="2448" y="611"/>
+        </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="UkC-R3-cps">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Rp-K1-OCf" customClass="NavigationViewController" customModule="GoodNightHack" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TbC-df-Rcx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vZt-No-7rm" kind="relationship" relationship="rootViewController" id="FJu-bC-yfG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lgu-bm-xFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="835" y="-1002"/>
         </scene>
     </scenes>
 </document>
