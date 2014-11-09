@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD4640F81A0F1DAE007E6C7D /* HistoryItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4640F71A0F1DAE007E6C7D /* HistoryItemTableViewCell.swift */; };
+		CD4640FB1A0F2452007E6C7D /* DayDrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4640FA1A0F2452007E6C7D /* DayDrinksViewController.swift */; };
 		CD9E4EFD1A0E47B1003B5034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E4EFC1A0E47B1003B5034 /* AppDelegate.swift */; };
 		CD9E4F021A0E47B1003B5034 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9E4F001A0E47B1003B5034 /* Main.storyboard */; };
 		CD9E4F041A0E47B1003B5034 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9E4F031A0E47B1003B5034 /* Images.xcassets */; };
@@ -14,7 +16,7 @@
 		CD9E4F131A0E47B1003B5034 /* GoodNightHackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E4F121A0E47B1003B5034 /* GoodNightHackTests.swift */; };
 		CD9E4F1D1A0E48B5003B5034 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E4F1C1A0E48B5003B5034 /* MainViewController.swift */; };
 		CD9E4F1F1A0E492A003B5034 /* RecommendationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E4F1E1A0E492A003B5034 /* RecommendationsViewController.swift */; };
-		CD9E4F211A0E4944003B5034 /* PreviousViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E4F201A0E4944003B5034 /* PreviousViewController.swift */; };
+		CD9E4F211A0E4944003B5034 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E4F201A0E4944003B5034 /* HistoryViewController.swift */; };
 		CD9E4F231A0E4968003B5034 /* DrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E4F221A0E4968003B5034 /* DrinksViewController.swift */; };
 		CD9E4F251A0E49DB003B5034 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E4F241A0E49DB003B5034 /* NavigationViewController.swift */; };
 		CD9E4F271A0E5758003B5034 /* AddDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E4F261A0E5758003B5034 /* AddDrinkViewController.swift */; };
@@ -29,11 +31,14 @@
 		CD9E4F471A0E5E2F003B5034 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9E4F461A0E5E2F003B5034 /* Security.framework */; };
 		CD9E4F491A0E5E34003B5034 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9E4F481A0E5E34003B5034 /* StoreKit.framework */; };
 		CD9E4F4B1A0E5E3B003B5034 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9E4F4A1A0E5E3B003B5034 /* SystemConfiguration.framework */; };
-		CD9E4F501A0E5F59003B5034 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9E4F4C1A0E5F59003B5034 /* Bolts.framework */; };
 		CD9E4F511A0E5F59003B5034 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9E4F4D1A0E5F59003B5034 /* Parse.framework */; };
 		CD9E4F521A0E5F59003B5034 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9E4F4E1A0E5F59003B5034 /* ParseFacebookUtils.framework */; };
 		CD9E4F531A0E5F59003B5034 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9E4F4F1A0E5F59003B5034 /* ParseUI.framework */; };
 		CD9E4F551A0E872D003B5034 /* AddDrinkItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E4F541A0E872D003B5034 /* AddDrinkItemTableViewCell.swift */; };
+		CD9E4F591A0EAE2F003B5034 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9E4F581A0EAE2F003B5034 /* Helper.swift */; };
+		CD9E4F5B1A0ECCED003B5034 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9E4F5A1A0ECCED003B5034 /* FacebookSDK.framework */; };
+		CD9E4F5F1A0ED21A003B5034 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9E4F5E1A0ED21A003B5034 /* Social.framework */; };
+		CD9E4F611A0ED222003B5034 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9E4F601A0ED222003B5034 /* Accounts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD4640F71A0F1DAE007E6C7D /* HistoryItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryItemTableViewCell.swift; sourceTree = "<group>"; };
+		CD4640FA1A0F2452007E6C7D /* DayDrinksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayDrinksViewController.swift; sourceTree = "<group>"; };
 		CD9E4EF71A0E47B1003B5034 /* GoodNightHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodNightHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9E4EFB1A0E47B1003B5034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD9E4EFC1A0E47B1003B5034 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +65,7 @@
 		CD9E4F121A0E47B1003B5034 /* GoodNightHackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodNightHackTests.swift; sourceTree = "<group>"; };
 		CD9E4F1C1A0E48B5003B5034 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CD9E4F1E1A0E492A003B5034 /* RecommendationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendationsViewController.swift; sourceTree = "<group>"; };
-		CD9E4F201A0E4944003B5034 /* PreviousViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviousViewController.swift; sourceTree = "<group>"; };
+		CD9E4F201A0E4944003B5034 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		CD9E4F221A0E4968003B5034 /* DrinksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinksViewController.swift; sourceTree = "<group>"; };
 		CD9E4F241A0E49DB003B5034 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		CD9E4F261A0E5758003B5034 /* AddDrinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDrinkViewController.swift; sourceTree = "<group>"; };
@@ -74,11 +81,14 @@
 		CD9E4F461A0E5E2F003B5034 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CD9E4F481A0E5E34003B5034 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CD9E4F4A1A0E5E3B003B5034 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		CD9E4F4C1A0E5F59003B5034 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		CD9E4F4D1A0E5F59003B5034 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		CD9E4F4E1A0E5F59003B5034 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		CD9E4F4F1A0E5F59003B5034 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		CD9E4F541A0E872D003B5034 /* AddDrinkItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDrinkItemTableViewCell.swift; sourceTree = "<group>"; };
+		CD9E4F581A0EAE2F003B5034 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helper.swift; path = ../Helper.swift; sourceTree = "<group>"; };
+		CD9E4F5A1A0ECCED003B5034 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		CD9E4F5E1A0ED21A003B5034 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		CD9E4F601A0ED222003B5034 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9E4F611A0ED222003B5034 /* Accounts.framework in Frameworks */,
+				CD9E4F5F1A0ED21A003B5034 /* Social.framework in Frameworks */,
 				CD9E4F4B1A0E5E3B003B5034 /* SystemConfiguration.framework in Frameworks */,
 				CD9E4F491A0E5E34003B5034 /* StoreKit.framework in Frameworks */,
 				CD9E4F531A0E5F59003B5034 /* ParseUI.framework in Frameworks */,
@@ -95,11 +107,11 @@
 				CD9E4F411A0E5E1C003B5034 /* libz.dylib in Frameworks */,
 				CD9E4F3F1A0E5E14003B5034 /* CoreLocation.framework in Frameworks */,
 				CD9E4F3D1A0E5E0E003B5034 /* CoreGraphics.framework in Frameworks */,
-				CD9E4F501A0E5F59003B5034 /* Bolts.framework in Frameworks */,
 				CD9E4F3B1A0E5E07003B5034 /* CFNetwork.framework in Frameworks */,
 				CD9E4F511A0E5F59003B5034 /* Parse.framework in Frameworks */,
 				CD9E4F391A0E5DF8003B5034 /* AudioToolbox.framework in Frameworks */,
 				CD9E4F521A0E5F59003B5034 /* ParseFacebookUtils.framework in Frameworks */,
+				CD9E4F5B1A0ECCED003B5034 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +125,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD4640F51A0F09E6007E6C7D /* MainApp */ = {
+			isa = PBXGroup;
+			children = (
+				CD9E4F241A0E49DB003B5034 /* NavigationViewController.swift */,
+				CD9E4F1E1A0E492A003B5034 /* RecommendationsViewController.swift */,
+			);
+			name = MainApp;
+			sourceTree = "<group>";
+		};
+		CD4640F61A0F09FB007E6C7D /* AddDrinks */ = {
+			isa = PBXGroup;
+			children = (
+				CD9E4F541A0E872D003B5034 /* AddDrinkItemTableViewCell.swift */,
+				CD9E4F261A0E5758003B5034 /* AddDrinkViewController.swift */,
+				CD9E4F221A0E4968003B5034 /* DrinksViewController.swift */,
+			);
+			name = AddDrinks;
+			sourceTree = "<group>";
+		};
+		CD4640F91A0F1DB3007E6C7D /* History */ = {
+			isa = PBXGroup;
+			children = (
+				CD9E4F201A0E4944003B5034 /* HistoryViewController.swift */,
+				CD4640F71A0F1DAE007E6C7D /* HistoryItemTableViewCell.swift */,
+				CD4640FA1A0F2452007E6C7D /* DayDrinksViewController.swift */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
 		CD9E4EEE1A0E47B1003B5034 = {
 			isa = PBXGroup;
 			children = (
@@ -135,16 +176,13 @@
 			isa = PBXGroup;
 			children = (
 				CD9E4EFC1A0E47B1003B5034 /* AppDelegate.swift */,
-				CD9E4F241A0E49DB003B5034 /* NavigationViewController.swift */,
+				CD9E4F051A0E47B1003B5034 /* LaunchScreen.xib */,
 				CD9E4F001A0E47B1003B5034 /* Main.storyboard */,
-				CD9E4F541A0E872D003B5034 /* AddDrinkItemTableViewCell.swift */,
-				CD9E4F261A0E5758003B5034 /* AddDrinkViewController.swift */,
-				CD9E4F1E1A0E492A003B5034 /* RecommendationsViewController.swift */,
-				CD9E4F201A0E4944003B5034 /* PreviousViewController.swift */,
-				CD9E4F221A0E4968003B5034 /* DrinksViewController.swift */,
+				CD4640F51A0F09E6007E6C7D /* MainApp */,
+				CD4640F61A0F09FB007E6C7D /* AddDrinks */,
+				CD4640F91A0F1DB3007E6C7D /* History */,
 				CD9E4F1C1A0E48B5003B5034 /* MainViewController.swift */,
 				CD9E4F031A0E47B1003B5034 /* Images.xcassets */,
-				CD9E4F051A0E47B1003B5034 /* LaunchScreen.xib */,
 				CD9E4EFA1A0E47B1003B5034 /* Supporting Files */,
 			);
 			path = GoodNightHack;
@@ -153,6 +191,7 @@
 		CD9E4EFA1A0E47B1003B5034 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CD9E4F581A0EAE2F003B5034 /* Helper.swift */,
 				CD9E4F281A0E58EA003B5034 /* Frameworks */,
 				CD9E4EFB1A0E47B1003B5034 /* Info.plist */,
 				CD9E4F361A0E5C84003B5034 /* Helper.m */,
@@ -181,7 +220,9 @@
 		CD9E4F281A0E58EA003B5034 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CD9E4F4C1A0E5F59003B5034 /* Bolts.framework */,
+				CD9E4F601A0ED222003B5034 /* Accounts.framework */,
+				CD9E4F5E1A0ED21A003B5034 /* Social.framework */,
+				CD9E4F5A1A0ECCED003B5034 /* FacebookSDK.framework */,
 				CD9E4F4D1A0E5F59003B5034 /* Parse.framework */,
 				CD9E4F4E1A0E5F59003B5034 /* ParseFacebookUtils.framework */,
 				CD9E4F4F1A0E5F59003B5034 /* ParseUI.framework */,
@@ -248,9 +289,11 @@
 				TargetAttributes = {
 					CD9E4EF61A0E47B1003B5034 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = KB4UVH66FP;
 					};
 					CD9E4F0B1A0E47B1003B5034 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = KB4UVH66FP;
 						TestTargetID = CD9E4EF61A0E47B1003B5034;
 					};
 				};
@@ -303,11 +346,14 @@
 				CD9E4F251A0E49DB003B5034 /* NavigationViewController.swift in Sources */,
 				CD9E4F1F1A0E492A003B5034 /* RecommendationsViewController.swift in Sources */,
 				CD9E4F371A0E5C84003B5034 /* Helper.m in Sources */,
+				CD4640FB1A0F2452007E6C7D /* DayDrinksViewController.swift in Sources */,
 				CD9E4EFD1A0E47B1003B5034 /* AppDelegate.swift in Sources */,
 				CD9E4F551A0E872D003B5034 /* AddDrinkItemTableViewCell.swift in Sources */,
 				CD9E4F231A0E4968003B5034 /* DrinksViewController.swift in Sources */,
+				CD9E4F591A0EAE2F003B5034 /* Helper.swift in Sources */,
 				CD9E4F1D1A0E48B5003B5034 /* MainViewController.swift in Sources */,
-				CD9E4F211A0E4944003B5034 /* PreviousViewController.swift in Sources */,
+				CD9E4F211A0E4944003B5034 /* HistoryViewController.swift in Sources */,
+				CD4640F81A0F1DAE007E6C7D /* HistoryItemTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +412,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Angelos Ioannou (HWQ48829C8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Angelos Ioannou (HWQ48829C8)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -386,6 +433,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "d03489f5-ecd8-47d2-97d3-11a1a323d979";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -409,7 +457,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Angelos Ioannou (HWQ48829C8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Angelos Ioannou (HWQ48829C8)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -422,6 +471,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "d03489f5-ecd8-47d2-97d3-11a1a323d979";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -432,14 +482,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Michael Schinis (XSE3733832)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Michael Schinis (XSE3733832)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GoodNightHack",
 				);
 				INFOPLIST_FILE = GoodNightHack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c29b5af6-6d2a-4be1-b858-b4950e3afe52";
 				SWIFT_OBJC_BRIDGING_HEADER = "GoodNightHack/GoodNightHack-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -449,14 +504,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Michael Schinis (XSE3733832)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Michael Schinis (XSE3733832)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GoodNightHack",
 				);
 				INFOPLIST_FILE = GoodNightHack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c29b5af6-6d2a-4be1-b858-b4950e3afe52";
 				SWIFT_OBJC_BRIDGING_HEADER = "GoodNightHack/GoodNightHack-Bridging-Header.h";
 			};
 			name = Release;
@@ -465,6 +525,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -476,6 +538,7 @@
 				INFOPLIST_FILE = GoodNightHackTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoodNightHack.app/GoodNightHack";
 			};
 			name = Debug;
@@ -484,6 +547,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -491,6 +556,7 @@
 				INFOPLIST_FILE = GoodNightHackTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoodNightHack.app/GoodNightHack";
 			};
 			name = Release;
@@ -514,6 +580,7 @@
 				CD9E4F181A0E47B1003B5034 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD9E4F191A0E47B1003B5034 /* Build configuration list for PBXNativeTarget "GoodNightHackTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +589,7 @@
 				CD9E4F1B1A0E47B1003B5034 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

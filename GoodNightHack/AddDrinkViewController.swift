@@ -68,7 +68,7 @@ class AddDrinkViewController: UIViewController, UITableViewDataSource, UISearchB
     func filterContentForSearchText(searchText: String) {
         // Filter the array using the filter method
         self.drinks = self.drinksCopy.filter({( object: PFObject) -> Bool in
-            let stringMatch = (object["name"] as String).lowercaseString.rangeOfString(searchText)
+            let stringMatch = (object["name"] as String).lowercaseString.rangeOfString(searchText.lowercaseString)
             return (stringMatch != nil)
         })
     }

@@ -33,5 +33,81 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoodNightHack/DrinksViewController.swift"
+            timestampString = "437197497.293643"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "storeDrinkRecords(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoodNightHack.DrinksViewController.(storeDrinkRecords (GoodNightHack.DrinksViewController) -&gt; (Swift.String) -&gt; ()).(closure #1)"
+                  moduleName = "GoodNightHack"
+                  urlString = "file:///Users/mschinis/Documents/iOS/Swift/GoodNightHack/GoodNightHack/DrinksViewController.swift"
+                  timestampString = "437185778.170342"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "1080">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoodNightHack.DrinksViewController.(storeDrinkRecords (GoodNightHack.DrinksViewController) -&gt; (Swift.String) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "GoodNightHack"
+                  urlString = "file:///Users/mschinis/Documents/iOS/Swift/GoodNightHack/GoodNightHack/DrinksViewController.swift"
+                  timestampString = "437185778.188019"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reabstraction thunk helper from @callee_owned (@owned Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIAlertAction&gt;) -&gt; (@unowned ()) to @callee_owned (@in Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIAlertAction&gt;) -&gt; (@out ())"
+                  moduleName = "GoodNightHack"
+                  urlString = "file:///Users/mschinis/Documents/iOS/Swift/GoodNightHack/GoodNightHack/DrinksViewController.swift"
+                  timestampString = "437185778.18827"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Helper.swift"
+            timestampString = "437202203.924648"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getFeelingatIndex(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
