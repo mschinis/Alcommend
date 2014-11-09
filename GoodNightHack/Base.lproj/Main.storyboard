@@ -6,6 +6,24 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="Swe-Gx-VMJ">
+            <objects>
+                <viewController id="Vt5-eK-ghT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BcD-uX-OWi"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xp7-1B-kmX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ghF-Di-1hX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jz3-g7-h2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215" y="-104"/>
+        </scene>
         <!--Menu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -19,14 +37,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhz-eU-95h">
-                                <rect key="frame" x="90" y="171" width="129" height="30"/>
+                                <rect key="frame" x="90" y="171" width="269" height="38"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
+                                <color key="tintColor" red="1" green="0.70052943283547142" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Recommendations"/>
                                 <connections>
                                     <action selector="RecommendationsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fxW-xO-H1S"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxJ-F8-Sqc">
-                                <rect key="frame" x="130" y="217" width="49" height="30"/>
+                                <rect key="frame" x="107" y="234" width="218" height="33"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <state key="normal" title="History">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -35,19 +57,26 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohL-AV-bXZ">
-                                <rect key="frame" x="62" y="265" width="184" height="30"/>
-                                <state key="normal" title="Add drinks for specific day">
+                                <rect key="frame" x="107" y="295" width="211" height="42"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
+                                <color key="tintColor" red="0.89090119950000002" green="0.046855255009999999" blue="0.081217411340000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Log Drinks">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="AddDrinksButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L1r-dp-q8U"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Nx-Zb-Sa5">
+                                <rect key="frame" x="66" y="356" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="VyA-9c-BWc"/>
                     <connections>
+                        <outlet property="chartView" destination="6Nx-Zb-Sa5" id="Qkt-tH-Hvr"/>
                         <segue destination="KCG-Sn-Z2l" kind="show" identifier="showPreviousViewSegue" id="048-pT-ypq"/>
                         <segue destination="dam-UM-tko" kind="show" identifier="showDrinksSegue" id="Lp5-Jc-H0M"/>
                     </connections>
@@ -72,11 +101,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecommendationItemCell" rowHeight="60" id="UC4-o2-DNd">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecommendationItemCell" textLabel="Aja-aa-5bt" detailTextLabel="ZX0-ln-k0e" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="UC4-o2-DNd">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UC4-o2-DNd" id="WTK-lw-0gM">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Aja-aa-5bt">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZX0-ln-k0e">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -98,6 +141,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableView" destination="1Pd-GW-gM4" id="ZyB-0C-ljL"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="showMenuSegue" id="yA2-hu-K0E"/>
                     </connections>
                 </viewController>
@@ -323,7 +367,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ela-1z-bO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1732" y="613"/>
+            <point key="canvasLocation" x="835" y="769"/>
         </scene>
         <!--Day Drinks View Controller-->
         <scene sceneID="X4c-0o-hwC">
@@ -552,7 +596,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2448" y="611"/>
+            <point key="canvasLocation" x="1673" y="769"/>
         </scene>
         <!--Navigation View Controller-->
         <scene sceneID="UkC-R3-cps">

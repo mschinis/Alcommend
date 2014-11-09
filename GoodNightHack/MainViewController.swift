@@ -7,15 +7,35 @@
 //
 
 import UIKit
+import QuartzCore
 
-class MainViewController: UIViewController {
-
+class MainViewController: UIViewController, LineChartDelegate {
+    
+    @IBOutlet weak var chartView: UIView!
+    var lineChart: LineChart?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        var data: Array<CGFloat> = [3, 4, 9, 11, 13, 15]
+        var data2: Array<CGFloat> = [1, 3, 5, 13, 17, 20]
+        
+        lineChart = LineChart()
+        lineChart!.areaUnderLinesVisible = true
+        lineChart!.addLine(data)
+        lineChart!.addLine(data2)
+        lineChart!.delegate = self
+        self.chartView.addSubview(lineChart!)
+        
+    
         // Do any additional setup after loading the view.
     }
-    override func viewWillAppear(animated: Bool) {
+    func didSelectDataPoint(x: CGFloat, yValues: Array<CGFloat>) {
+        //label.text = "x: \(x)     y: \(yValues)"
+    }
+    
+    override func viewWillAppear(animated: Bool){
         self.navigationItem.setHidesBackButton(true, animated: false)
     }
     override func didReceiveMemoryWarning() {
