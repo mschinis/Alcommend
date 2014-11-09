@@ -340,7 +340,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enS-bZ-nch">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Drinks" id="fQu-m1-AfH">
+                                    <navigationItem title="Day overview" id="fQu-m1-AfH">
                                         <barButtonItem key="rightBarButtonItem" title="Close" id="gSj-lP-NKA">
                                             <connections>
                                                 <action selector="closeBarButtonPressed:" destination="4Kp-Fp-Biq" id="Zi3-aO-B6o"/>
@@ -402,9 +402,18 @@
                                     <constraint firstItem="qPV-ub-WVx" firstAttribute="top" secondItem="7R3-4b-EHW" secondAttribute="top" constant="8" id="sBW-pX-ScS"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XiD-Zn-yh6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XiD-Zn-yh6">
                                 <rect key="frame" x="0.0" y="64" width="600" height="436"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dayOverviewItemCell" rowHeight="60" id="uXm-yK-2ys">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uXm-yK-2ys" id="wvC-7X-Ofn">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
