@@ -76,15 +76,15 @@ class DrinksViewController: UIViewController,UITableViewDataSource,UITableViewDe
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         switch(row){
         case 0:
-            return "Perfect"
+            return Helper().getFeelingatIndex(0)
         case 1:
-            return "Tipsy"
+            return Helper().getFeelingatIndex(1)
         case 2:
-            return "One too many"
+            return Helper().getFeelingatIndex(2)
         case 3:
-            return "Drunk"
+            return Helper().getFeelingatIndex(3)
         case 4:
-            return "Puked"
+            return Helper().getFeelingatIndex(4)
         default:
             return "whateva"
         }

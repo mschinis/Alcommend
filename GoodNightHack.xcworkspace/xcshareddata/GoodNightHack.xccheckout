@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>19F75F05-80FE-4908-B9D3-282729D27003</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GoodNightHack</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>93265CA733C5A23B1A0F77247F89D2F1E0136D3B</key>
+		<string>https://github.com/mschinis/GoodNightHack.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GoodNightHack.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>93265CA733C5A23B1A0F77247F89D2F1E0136D3B</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mschinis/GoodNightHack.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>93265CA733C5A23B1A0F77247F89D2F1E0136D3B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>93265CA733C5A23B1A0F77247F89D2F1E0136D3B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GoodNightHack</string>
+		</dict>
+	</array>
+</dict>
+</plist>

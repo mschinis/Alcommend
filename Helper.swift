@@ -10,7 +10,7 @@ import Foundation
 
 struct Helper{
     var user:PFUser = PFUser()
-    var feelings = ["Perfect","Tipsy","One too many","Drunk","Puked"]
+    var feelings = ["Sober","Perfect","Had too many","Drunk","Far too drunk"]
     
     func alert(titleString:String,bodyString:String) -> UIAlertController{
         var alertView = UIAlertController(title: titleString, message: bodyString, preferredStyle: UIAlertControllerStyle.Alert)

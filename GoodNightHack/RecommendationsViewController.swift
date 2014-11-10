@@ -18,7 +18,7 @@ class RecommendationsViewController: UIViewController, PFLogInViewControllerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        PFUser.logOut()
         self.tableView.delegate = self
         self.tableView.dataSource = self
         // Do any additional setup after loading the view.
@@ -67,7 +67,7 @@ class RecommendationsViewController: UIViewController, PFLogInViewControllerDele
         let potiri = self.dbResults[indexPath.row]["size"] as? String
         cell.textLabel.text = self.dbResults[indexPath.row]["name"] as? String
         
-        cell.detailTextLabel?.text = "\(self.recommendationUnits[indexPath.row]) " + potiri! + " "
+        cell.detailTextLabel?.text = "Up to \(self.recommendationUnits[indexPath.row]) " + potiri! + " "
         return cell
     }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -110,7 +110,7 @@ class MyLoginViewController : PFLogInViewController {
         super.viewDidLoad()
         
         let logoLabel = UILabel()
-        logoLabel.text = "Alcommend me"
+        logoLabel.text = "Alcommend"
         logoLabel.font = UIFont(name: "AmericanTypewriter", size: 40)
         logoLabel.sizeToFit()
         self.logInView.logo = logoLabel as UIView
